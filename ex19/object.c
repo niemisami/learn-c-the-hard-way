@@ -14,7 +14,7 @@ void Object_destroy(void *self)
     }
 }
 
-void Object describe(void *self) 
+void Object_describe(void *self) 
 {
     Object *obj = self;
     printf("%s.\n", obj->description);
@@ -38,7 +38,7 @@ int Object_attack(void *self, int damage)
    return 0;
 }
 
-void Object_new(size_t size, Object proto, char *description) 
+void *Object_new(size_t size, Object proto, char *description) 
 {
     // setup the default function in case they aren't set
 
